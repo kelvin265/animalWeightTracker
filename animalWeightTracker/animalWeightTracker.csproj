@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C046901-C539-4099-B5BC-056B0104F5BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>animalWeightTracker</RootNamespace>
+    <AssemblyName>animalWeightTracker</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SQLite.NET, Version=0.21.1869.3794, Culture=neutral, PublicKeyToken=c273bd375e695f9c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SQLite.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\Activity.cs" />
+    <Compile Include="classes\Animal.cs" />
+    <Compile Include="classes\Exercise.cs" />
+    <Compile Include="classes\Meal.cs" />
+    <Compile Include="classes\Measurement.cs" />
+    <Compile Include="classes\Staff.cs" />
+    <Compile Include="classes\Waist.cs" />
+    <Compile Include="classes\weight.cs" />
+    <Compile Include="database.cs" />
+    <Compile Include="dsWeight.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWeight.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddActivityLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddActivityLevel.Designer.cs">
+      <DependentUpon>frmAddActivityLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAnimal.Designer.cs">
+      <DependentUpon>frmAddAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddAnimalExercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAnimalExercise.Designer.cs">
+      <DependentUpon>frmAddAnimalExercise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddAnimalMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAnimalMeal.Designer.cs">
+      <DependentUpon>frmAddAnimalMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddAnimalMeasurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAnimalMeasurement.Designer.cs">
+      <DependentUpon>frmAddAnimalMeasurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddExercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddExercise.Designer.cs">
+      <DependentUpon>frmAddExercise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddMeal.Designer.cs">
+      <DependentUpon>frmAddMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddStaff.Designer.cs">
+      <DependentUpon>frmAddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnimal.Designer.cs">
+      <DependentUpon>frmAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnimalProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnimalProgress.Designer.cs">
+      <DependentUpon>frmAnimalProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateActivityLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateActivityLevel.Designer.cs">
+      <DependentUpon>frmUpdateActivityLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateAnimal.Designer.cs">
+      <DependentUpon>frmUpdateAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateAnimalExercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateAnimalExercise.Designer.cs">
+      <DependentUpon>frmUpdateAnimalExercise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateAnimalMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateAnimalMeal.Designer.cs">
+      <DependentUpon>frmUpdateAnimalMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateAnimalMeasurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateAnimalMeasurement.Designer.cs">
+      <DependentUpon>frmUpdateAnimalMeasurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateExercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateExercise.Designer.cs">
+      <DependentUpon>frmUpdateExercise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateMeal.Designer.cs">
+      <DependentUpon>frmUpdateMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateStaff.Designer.cs">
+      <DependentUpon>frmUpdateStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddActivityLevel.resx">
+      <DependentUpon>frmAddActivityLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAnimal.resx">
+      <DependentUpon>frmAddAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAnimalExercise.resx">
+      <DependentUpon>frmAddAnimalExercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAnimalMeal.resx">
+      <DependentUpon>frmAddAnimalMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAnimalMeasurement.resx">
+      <DependentUpon>frmAddAnimalMeasurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddExercise.resx">
+      <DependentUpon>frmAddExercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddMeal.resx">
+      <DependentUpon>frmAddMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddStaff.resx">
+      <DependentUpon>frmAddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnimal.resx">
+      <DependentUpon>frmAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnimalProgress.resx">
+      <DependentUpon>frmAnimalProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateActivityLevel.resx">
+      <DependentUpon>frmUpdateActivityLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateAnimal.resx">
+      <DependentUpon>frmUpdateAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateAnimalExercise.resx">
+      <DependentUpon>frmUpdateAnimalExercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateAnimalMeal.resx">
+      <DependentUpon>frmUpdateAnimalMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateAnimalMeasurement.resx">
+      <DependentUpon>frmUpdateAnimalMeasurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateExercise.resx">
+      <DependentUpon>frmUpdateExercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateMeal.resx">
+      <DependentUpon>frmUpdateMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateStaff.resx">
+      <DependentUpon>frmUpdateStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="dsWeight.xsc">
+      <DependentUpon>dsWeight.xsd</DependentUpon>
+    </None>
+    <None Include="dsWeight.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWeight.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsWeight.xss">
+      <DependentUpon>dsWeight.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
